@@ -1,0 +1,4 @@
+                    // https://metanit.com/sharp/tutorial/13.5.php
+                    // https://docs.microsoft.com/ru-ru/dotnet/api/system.threading.tasks.task.whenall?view=netframework-4.7.2
+                    // https://jeremylindsayni.wordpress.com/2019/03/11/using-async-await-and-task-whenall-to-improve-the-overall-speed-of-your-c-code/
+                    // https://ru.stackoverflow.com/questions/438919/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-task-whenall

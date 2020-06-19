@@ -1,0 +1,144 @@
+﻿<div class="container">
+    <div class="search-main">
+        <div class="step1">
+            <span class="step">Шаг 1/3</span>
+            <span class="step-description">Сделайте качественное фронтальное селфи</span>
+            <a class="step-description requirements" href="#ex3" rel="modal:open">Требования к селфи</a>
+            <video id="camera" playsinline autoplay></video>
+            <label for="imageUpload" class="upload-image" id="take_snapshot">Сделать селфи</label>
+            <div class="result-container" id="selfie-container">
+
+            </div>
+            <label for="imageUpload" class="upload-image" id="approve_selfie">Подтвердить</label>
+        </div>
+
+        <div class="step2">
+            <span class="step">Шаг 2/3</span>
+            <span class="step-description">Выберите парк для поиска</span>
+            <div class="result-container">
+                <div class="park-container" id="37517001">
+                    <div class="checkbox">
+                        <div class="check"></div>
+                    </div>
+                    <img src="/images/lebyazhij_logo.png" alt="test">
+                </div>
+                <div class="park-container" id="37517002">
+                    <div class="checkbox">
+                        <div class="check"></div>
+                    </div>
+                    <img src="/images/freestyle_logo.gif" alt="test">
+                </div>
+            </div>
+            <div class="park-button">
+                <button disabled="disabled" id="park" class="park-btn">Подтвердить</button>
+            </div>
+        </div>
+
+        <div class="step3">
+            <span class="step">Шаг 3/3</span>
+            <span class="step-description">Выберите дату или диапазон дат (<strong>0</strong> дней максимум)</span>
+            <div id="myCalendar" class="vanilla-calendar vanilla-calendar" style="margin-bottom: 20px">
+                <div class="vanilla-calendar-header">
+                    <button type="button" class="vanilla-calendar-btn vanilla-calendar-btn-left" data-calendar-toggle="previous"></button>
+                    <div class="month"></div>
+                    <button type="button" class="vanilla-calendar-btn  vanilla-calendar-btn-right" data-calendar-toggle="next"></button>
+                </div>
+                <div class="vanilla-calendar-week">
+                    <span>ПН</span>
+                    <span>ВТ</span>
+                    <span>СР</span>
+                    <span>ЧТ</span>
+                    <span>ПТ</span>
+                    <span>СБ</span>
+                    <span class="sunday">ВС</span>
+                </div>
+                <div class="vanilla-calendar-body" data-calendar-area="month">
+
+                </div>
+            </div>
+            <div class="calendar-rules-description">
+                <span>Поиск доступен в течении последних <span id="days-count"></span> дней</span>
+            </div>
+            <div class="search-button-block">
+                <button disabled="disabled" class="search-button" id="search">Поиск</button>
+            </div>
+        </div>
+    </div>
+    <div class="search-result">
+        <div class="description-result">
+            <span class="description-result-first">По вашему запросу найдено <span class="count"></span> фото</span>
+            <span class="description-result-second">Выберите интересующие Вас фотографии и оформите заказ</span>
+        </div>
+        <div class="result-container" id="result-container">
+
+        </div>
+    </div>
+    <div class="order-block">
+        <div class="order-block-container">
+            <div class="order-description">
+                <span class="choose-count-block">Выбрано <span id="choose-count">0</span> из <span class="count"></span></span>
+                <span class="sum-block">К оплате <span id="sum">0 BYN</span></span>
+            </div>
+            <div class="order-button">
+                <button disabled="disabled" id="order" class="order-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+    <div class="content positive-content">
+        <div class="logo">
+            <img src="/images/logo-black-big.png" alt="logo">
+        </div>
+        <div class="text">
+            <span class="text-1">Спасибо за покупку!</span>
+            <span class="text-2">Будем рады видеть вас снова</span>
+        </div>
+        <div class="positive-image">
+            <img src="/images/positive.png" alt="smile">
+        </div>
+        <div class="return-to-index">
+            <a href="/index.html">На главную</a>
+        </div>
+    </div>
+    <div class="content negative-content">
+        <div class="logo">
+            <img src="/images/logo-black-big.png" alt="logo">
+        </div>
+        <div class="text">
+            <span class="text-1">Упс! Что-то пошло не так</span>
+            <span class="text-2">Попробуйте повторить позже</span>
+        </div>
+        <div class="positive-image">
+            <img src="/images/negative.png" alt="smile">
+        </div>
+        <div class="return-to-index return-to-index-negative">
+            <a href="/index.html">На главную</a>
+            <a href="/Service/Search">Попробовать еще раз</a>
+        </div>
+    </div>
+    <div class="not-found not-found-images">
+        <span class="step">По вашему запросу фотографии не найдены</span>
+        <span class="step-description">Загрузите качественное фронтальное селфи</span>
+        <img src="./images/human.png" alt="image">
+        <span class="step-description">Пример правильного селфи</span>
+        <a class="upload-image" href="/Service/Search">Изменить селфи</a>
+    </div>
+    <div class="not-found not-found-technical">
+        <span class="step">Из-за технических особенностей фотографии за сегодняшнее число недоступны</span>
+        <img src="./images/time.png" alt="image">
+        <span class="step-description">Фотографии будут доступны завтра с 8:00</span>
+        <div></div>
+        <div class="not-found-buttons">
+            <a class="upload-image" href="#ex1" rel="modal:open">Уведомить</a>
+            <a class="upload-image" href="/Service/Search">Попробовать еще раз</a>
+        </div>
+    </div>
+</div>
+<script>
+    localStorage.setItem('requestId', '@ViewBag.requestId');
+</script>
+<script>
+    window.onload = function(){
+        var el = document.getElementById('preloader');
+        el.style.display = 'block';
+    };
+</script>

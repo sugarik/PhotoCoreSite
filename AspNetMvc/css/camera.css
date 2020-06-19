@@ -1,0 +1,20 @@
+#camera{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+#results {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#result_image {
+    width: 100%;
+}

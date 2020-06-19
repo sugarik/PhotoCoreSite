@@ -1,0 +1,33 @@
+Публичная ссылка:
+https://drive.google.com/open?id=1-6MPmjpn-QoasA2-Lr575ftbKjbJrz5X
+получаем редирект на
+https://drive.google.com/file/d/1-6MPmjpn-QoasA2-Lr575ftbKjbJrz5X/view
+
+сокращённая ссылка:
+https://docs.google.com/uc?id=1-6MPmjpn-QoasA2-Lr575ftbKjbJrz5X
+при переходе получаем редирект на временную ссылку:
+https://doc-0o-3g-docs.googleusercontent.com/docs/securesc/9u6mtmg5mvk90mgnuljvtr31ndv3e9f4/3l2sm4lm630oo2f3t0k0i0i25ro2somf/1581441300000/02139641449944576239/02139641449944576239/1-6MPmjpn-QoasA2-Lr575ftbKjbJrz5X?authuser=0&nonce=hdo167hovd6ga&user=02139641449944576239&hash=fqmd0jbsl2m025sof7j3bc8b04duom3r
+Она временная, не постоянная!!!
+
+Формат для скачивания (WebContentLink)
+https://drive.google.com/uc?id=1-6MPmjpn-QoasA2-Lr575ftbKjbJrz5X&export=download
+получаем редирект на публичную ссылку и скачивание контента:
+https://drive.google.com/file/d/1-6MPmjpn-QoasA2-Lr575ftbKjbJrz5X/view
+
+WebViewLink:
+https://drive.google.com/file/d/1-6MPmjpn-QoasA2-Lr575ftbKjbJrz5X/view?usp=drivesdk
+получаем редирект на публичную ссылку:
+https://drive.google.com/file/d/1-6MPmjpn-QoasA2-Lr575ftbKjbJrz5X/view
+
+
+
+https://drive.google.com/file/d/1tvL5QQ7THSPLGIZ1o6sjUe31clALTIzX/view?usp=sharing
+
+https://drive.google.com/uc?export=download&id=<Идентификатор файла>
+
+
+<audio controls>
+  <source src="https://docs.google.com/uc?id=1syzEijnqHn8hHIWIFaqcJXp9X4OPB-YZ" type="audio/mpeg">
+</audio>
+
+

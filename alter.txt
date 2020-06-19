@@ -1,0 +1,6 @@
+USE master;  
+GO  
+ALTER DATABASE photocore MODIFY NAME = photocore2 ;
+GO  
+
+

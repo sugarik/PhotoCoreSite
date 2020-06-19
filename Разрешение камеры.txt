@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/17056654/getting-the-real-html5-video-width-and-height
+
+https://stackoverflow.com/questions/27420581/get-maximum-video-resolution-with-getusermedia
+
+
+approve_selfie

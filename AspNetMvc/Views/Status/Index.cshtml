@@ -1,0 +1,24 @@
+﻿@using AspNetMvc.Models
+@model TestModel
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("RegisterDo", "Status", FormMethod.Post, new { @class = "", role = "form" }))
+{
+    @Html.TextBoxFor(m => m.Id, new { @class = "form-control", placeholder = "введите номер заказа" })
+    <div class="registration-button">
+        <input type="submit" value="RegisterDo" class="" />
+    </div>
+}
+<br />
+<br />
+@using (Html.BeginForm("GetOrderStatusDo", "Status", FormMethod.Get, new { @class = "", role = "form" }))
+{
+    @Html.TextBoxFor(m => m.Id, new { @class = "form-control", placeholder = "введите номер заказа" })
+    <div class="registration-button">
+        <input type="submit" value="Get" class="" />
+    </div>
+}
+
+

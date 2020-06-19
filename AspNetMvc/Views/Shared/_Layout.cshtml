@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewBag.Title – приложение</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="~/css/slick-theme.css">
+    <link href="~/css/preloader.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/vanilla-calendar.css">
+    <link rel="stylesheet" href="~/css/camera.css">
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/main-mobile.css">
+    @*@Styles.Render("~/css")*@
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="~/js/slider.js"></script>
+    <script src="~/js/moment.js"></script>
+    <script src="~/js/menu.js"></script>
+
+    @*@Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body>
+    <div id="preloader">
+        <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                  d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+            </path>
+        </svg>
+    </div>
+    <div id="ex1" class="modal">
+        <span>Укажите Ваш email и мы оповестим Вас о доступе</span>
+        <input type="email" placeholder="Введите email">
+        <button>Подтвердить</button>
+    </div>
+    <div id="ex2" class="modal">
+        <span>Можно выбрать <strong>0</strong> дней максимум</span>
+    </div>
+    <div id="ex3" class="modal">
+        <div class="selfie-requirements-container scroll">
+            <p>
+                Постарайтесь смотреть прямо в камеру. Держите лицо прямо в спокойном мимическом состоянии. По возможности снимите очки.
+            </p>
+            <img src="/images/example.jpeg" alt="selfie_example">
+            <p>
+                На полноту поиска Ваших фотографий влияет качество поисковых фотографий лиц (селфи).
+                На качество влияет:
+                - освещённость (чем выше - тем лучше);
+                - тип освещения (рассеянное лучше, чем контрасное);
+                - отсутствие глубоких теней на лице;
+                - отсутствие предметов соркрытия лица (очки, маски и т.д.)
+            </p>
+
+        </div>
+    </div>
+    <div id="ex4" class="modal">
+        <div class="camera-error">
+            <p id="camera-error-desc">
+                Камера для селфи не обнаружена или проблема её работы с Вашим браузером. Попробуйте подключить камеру и/или поменять браузер.
+            </p>
+        </div>
+    </div>
+    <div id="ex6" class="modal">
+        <span></span>
+    </div>
+    <div id="ex5" class="modal">
+        <div class="order-description-container">
+            <div class="order-description">
+                <span class="order-item">Номер заказа: </span>
+                <span id="order-id" class="order-item-component"></span>
+            </div>
+            <div class="order-description">
+                <span class="order-item">К оплате: </span>
+                <span id="order-amount" class="order-item-component"></span>
+            </div>
+            <div class="order-description">
+                <span class="order-item">Описание заказа: </span>
+                <span id="order-description" class="order-item-component"></span>
+            </div>
+            <div class="order-description">
+                <label class="order-item">Введите email на который будут отправлены фотографии: </label>
+                <input type="email" name="email" id="order-email" placeholder="Email">
+                <strong class="email-error">Введите правильный Email</strong>
+                <button id="pay-button" disabled="disabled">Оплатить</button>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="exit">
+                <img src="~/images/exit.png" alt="close">
+            </div>
+            <div class="mobile-menu-logo">
+                <a href="/">
+                    <img src="~/images/logo-black.png" alt="logo">
+                </a>
+            </div>
+            <div class="mobile-menu-buttons">
+                @Html.Partial("_LoginPartial")
+            </div>
+            <div class="mobile-menu-search">
+                <img src="~/images/search-black.png" alt="search">
+                <a href="/Service/Search" class="search-button">Поиск фотографий</a>
+            </div>
+            <div class="bottom-menu">
+                <a href="/how-it-works.html">Как это работает?</a>
+                <a href="/feedback.html">Свяжитесь с нами</a>
+                <a href="/order.html">Как заказать?</a>
+                <a href="/rates.html">Оплата</a>
+                <a href="/delivery.html">Доставка</a>
+                <a href="/agreement.html">Пользовательское соглашение</a>
+            </div>
+        </div>
+        <header class="main-header">
+            <div class="header-image-center">
+                <div class="header-wrapper">
+                    <div class="default-block">
+                        <div class="search-images-link">
+                            <a href="/Service/Search">Поиск фотографий</a>
+                        </div>
+                        <a href="/" class="logo-image"></a>
+                        <div class="auth-buttons">
+                            @Html.Partial("_LoginPartial")
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="localization">
+                <select name="" id="">
+                    <option value="">RU</option>
+                    <option value="">EN</option>
+                    <option value="">DE</option>
+                </select>
+            </div>
+        </header>
+        <header class="mobile-header">
+            <div class="header-block-center">
+                <div class="header-wrapper">
+                    <a href="/" class="logo-image"></a>
+                    <div class="header-icon-container">
+                        <div class="search-icon"></div>
+                        <div class="burger-icon" id="open-menu-button"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="left-footer-side">
+                <div class="socials">
+                    <a href="">
+                        <img src="~/images/fb.png" alt="fb">
+                    </a>
+                    <a href="">
+                        <img src="~/images/tw.png" alt="tw">
+                    </a>
+                    <a href="">
+                        <img src="~/images/instagram.png" alt="inst">
+                    </a>
+                    <a href="">
+                        <img src="~/images/vk.png" alt="vk">
+                    </a>
+                </div>
+                <div class="pay">
+                    <img src="~/images/mastercard.png" alt="mc">
+                    <img src="~/images/visa-pay-logo.png" alt="visa">
+                    <img src="~/images/paypal-logo.png" alt="paypal">
+                    <img src="~/images/discover.png" alt="discover">
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="~/images/logo.png" alt="logo">
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu-top">
+                    <a href="/registration.html">Регистрация</a>
+                    <a href="/how-it-works.html">Как это работает?</a>
+                    <a href="/Service/Search">Попробовать сейчас</a>
+                    <a href="/feedback.html">Сяжитесь с нами</a>
+                </div>
+                <div class="footer-menu-bottom">
+                    <a href="/order.html">Как заказать?</a>
+                    <a href="/rates.html">Оплата</a>
+                    <a href="/delivery.html">Доставка</a>
+                    <a href="/agreement.html">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+    <script src="~/js/camera.js"></script>
+    <script src="~/js/functions.js"></script>
+</body>
+</html>
+@*<!DOCTYPE html>
+    <html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title – приложение ASP.NET</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                        <li>@Html.ActionLink("О программе", "About", "Home")</li>
+                        <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@

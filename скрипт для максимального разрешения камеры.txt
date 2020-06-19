@@ -1,0 +1,32 @@
+canvas = window.canvas = document.createElement('canvas');
+const video = document.querySelector('video');
+canvas.width = '100%';
+canvas.height = 'auto';
+
+const button = document.getElementById('take_snapshot');
+button.onclick = function () {
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+
+  let data = canvas.toDataURL('image/jpeg', 0.95);
+  document.getElementById('results').innerHTML = '<img src="' + data + '" id="result_image"/>';
+  document.getElementById("approve_selfie").style.display = "block";
+  
+  $('body,html').animate({scrollTop: document.body.offsetHeight - 200}, 800);
+};
+
+const constraints = {
+  audio: false,
+    video: {
+        optional: [
+            { minWidth: 320 },
+            { minWidth: 640 },
+            { minWidth: 800 },
+            { minWidth: 1024 },
+            { minWidth: 1280 },
+            { minWidth: 1920 },
+            { minWidth: 2560 },
+        ]
+    }
+};

@@ -1,0 +1,149 @@
+1. ###########################################################################################################################################
+
+изменён класс (добавлен locationId)
+    [Serializable]
+    public class SearchPhotosRequestFrontEnd
+    {
+
+        /// <summary> Назначенный FrontEnd идентификатор транзакции поиска фотографий. Будет использоваться как ключ поиска в базе </summary>
+        public string requestId { get; set; }
+
+        public List<string> faces { get; set; }
+
+        /// <summary> Список дат поиска фотографий </summary>
+        public List<string> searchDates { get; set; }
+    }
+
+на 
+
+    [Serializable]
+    public class SearchPhotosRequestFrontEnd
+    {
+
+        /// <summary> Назначенный FrontEnd идентификатор транзакции поиска фотографий. Будет использоваться как ключ поиска в базе </summary>
+        public string requestId { get; set; }
+
+        public string locationId { get; set; }
+
+        public List<string> faces { get; set; }
+
+        /// <summary> Список дат поиска фотографий </summary>
+        public List<string> searchDates { get; set; }
+    }
+
+
+
+2. ###########################################################################################################################################
+
+Изменён класс Photo входящий в класс SearchPhotosResponseBackEnd. Убраны поля width и height
+
+    [Serializable]
+    public class SearchPhotosResponseBackEnd
+    {
+        /// <summary> назначенный FrontEnd идентификатор транзакции поиска фотографий. Подтверждаемое значение </summary>
+        public string requestId { get; set; }
+
+        /// <summary> Список извлечённых лиц с идентификаторами </summary>
+        public List<Photo> photos { get; set; }
+    }
+
+    public class Photo
+    {
+        /// <summary> Идентификатор фотографии в базе. Эти идентификаторы потом надо вернуть в OrderRequest. Они соответствуют выбранным фотографиям </summary>
+        public string photoProcessId { get; set; }
+
+        /// <summary> Ссылка на хранилище миниатюры фотографии. Их надо закачать по ссылке и отобразить пользователю </summary>
+        public string thumbnailLink { get; set; }
+
+        /// <summary> Ширина фотографии в пикселях. Доп инфа для размещения под отображаемой миниатюрой фотографии. Отображается совместно ширина и высота в виде "6000х4000 пикселей" </summary>
+        public int width { get; set; }
+
+        /// <summary> Высота фотографии в пикселях. Доп инфа для размещения под отображаемой миниатюрой фотографии. Отображается совместно ширина и высота в виде "6000х4000 пикселей" </summary>
+        public int height { get; set; }
+
+        /// <summary> Дата и время фотографии. Доп инфа для размещения под отображаемой миниатюрой фотографии. Отображается под высотой и шириной в виде "02.02.2020г" </summary>
+        public string dateTime { get; set; }
+    }
+
+
+Стало
+
+    [Serializable]
+    public class SearchPhotosResponseBackEnd
+    {
+        /// <summary> назначенный FrontEnd идентификатор транзакции поиска фотографий. Подтверждаемое значение </summary>
+        public string requestId { get; set; }
+
+        /// <summary> Список извлечённых лиц с идентификаторами </summary>
+        public List<Photo> photos { get; set; }
+    }
+
+    public class Photo
+    {
+        /// <summary> Идентификатор фотографии в базе. Эти идентификаторы потом надо вернуть в OrderRequest. Они соответствуют выбранным фотографиям </summary>
+        public string photoProcessId { get; set; }
+
+        /// <summary> Ссылка на хранилище миниатюры фотографии. Их надо закачать по ссылке и отобразить пользователю </summary>
+        public string thumbnailLink { get; set; }
+
+        /// <summary> Дата и время фотографии. Доп инфа для размещения под отображаемой миниатюрой фотографии. Отображается под высотой и шириной в виде "02.02.2020г" </summary>
+        public string dateTime { get; set; }
+    }
+
+
+
+3. ###########################################################################################################################################
+
+Изменён класс OrderReservationResponseBackEnd. Переименован orderId в orderNumber
+
+
+
+4. ###########################################################################################################################################
+
+Изменён класс OrderPaymentRequestFrontEnd. Переименован orderId в orderNumber
+
+
+
+5. ###########################################################################################################################################
+
+Изменён класс 
+
+    [Serializable]
+    public class OrderPaymentRequestFrontEnd
+    {
+        /// <summary> Назначенный FrontEnd идентификатор транзакции оплаты покупки </summary>
+        public string requestId { get; set; }
+
+        /// <summary> Подтверждаемый идентификатор заказа </summary>
+        public string orderNumber { get; set; }
+
+        /// <summary> Введённый пользователем email доставки заказа </summary>
+        public string email { get; set; }
+    }
+
+на
+
+    [Serializable]
+    public class OrderPaymentRequestFrontEnd
+    {
+        /// <summary> Назначенный FrontEnd идентификатор транзакции оплаты покупки </summary>
+        public string requestId { get; set; }
+
+        /// <summary> Подтверждаемый идентификатор заказа </summary>
+        public string orderNumber { get; set; }
+
+        /// <summary> Введённый пользователем основной email доставки заказа </summary>
+        public string mainEmail { get; set; }
+
+        /// <summary> Введённый пользователем дополнительный email доставки заказа </summary>
+        public string backupEmail { get; set; }
+
+        /// <summary> Введённый пользователем номер телефона доставки заказа через мэссанджеры </summary>
+        public string phone { get; set; }
+
+        /// <summary> Матрица из активированных мэссанджеров для доставки заказа </summary>
+        public Int16 messangers { get; set; }
+    }
+
+
+6. ###########################################################################################################################################

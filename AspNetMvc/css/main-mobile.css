@@ -1,0 +1,536 @@
+@media (max-width: 1400px) {
+    .try-it-block {
+        width: 100%;
+        text-align: center;
+    }
+
+    .try-it-block .try-it-button {
+        margin-right: 0;
+    }
+
+    .how-it-works .description {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .how-it-works-items-container {
+        width: 100%;
+    }
+
+    .how-it-works-items-container .how-it-works-items {
+        margin-bottom: 50px;
+        width: 340px;
+    }
+}
+
+@media (max-height: 480px) {
+    .mobile-menu .mobile-menu-logo {
+        margin-bottom: 15px;
+    }
+
+    .mobile-menu .mobile-menu-search {
+        margin-top: 30px;
+    }
+}
+
+@media (max-height: 400px) {
+    .mobile-menu .mobile-menu-search {
+        margin-top: 13px;
+    }
+
+    .mobile-menu .exit {
+        height: 73px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container-top-left,
+    .container-top-right {
+        display: block;
+        margin: auto;
+        width: 52%;
+    }
+
+    .about-block .about-img {
+        opacity: 0.2;
+    }
+
+    .try-it-block .description {
+        text-align: left;
+        font-size: 16px;
+        margin-left: auto;
+    }
+
+    .try-it-block .try-it-button {
+        width: 441px;
+    }
+
+    .try-it-block .try-it-button a span {
+        transform: translate(-50%, -50%);
+    }
+
+    footer .footer-container {
+        width: 980px;
+    }
+
+    footer .footer-menu a {
+        font-size: 13px;
+    }
+
+    footer .footer-menu .footer-menu-top a {
+        margin-left: 5px;
+    }
+    
+    footer .footer-menu .footer-menu-bottom a {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 980px) {
+    .localization {
+        display: none;
+    }
+
+    .main-header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: block;
+        width: 100%;
+    }
+
+    .mobile-header .header-block-center {
+        display: block;
+        background-color: #F15F4E;
+        height: 60px;
+    }
+
+    .container-top-left, .container-top-right {
+        width: 90%;
+    }
+
+    .mobile-header .logo-image {
+        background-image: url('../images/logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        width: 117px;
+        height: 60px;
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+
+    .mobile-header .header-icon-container {
+        display: inline-block;
+        vertical-align: top;
+        height: 60px;
+        text-align: right;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .mobile-header .header-icon-container div {
+        display: inline-block;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .mobile-header .burger-icon {
+        background-image: url('../images/burger.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 24px;
+        height: 18px;
+        margin-left: 20px;
+    }
+
+    .mobile-header .search-icon {
+        background-image: url('../images/search.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+    }
+
+    .first-slide-text,
+    .second-slide-text,
+    .third-slide-text {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        text-align: center;
+    }
+
+    .second-slide-text span {
+        margin-left: 0;
+    }
+
+    .how-it-works {
+        height: auto;
+    }
+
+    .how-it-works .how-it-works-items {
+        display: inline-block;
+        width: 70%;
+        margin-bottom: 80px;
+    }
+
+    .how-it-works .ellipse {
+        display: inline-block;
+        width: 79px;
+        height: 79px;
+        vertical-align: top;
+        margin-top: 14px;
+        background-image: url('../images/ellipse-block.png');
+        text-align: center;
+    }
+
+    .how-it-works span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 44px;
+        display: block;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+        margin-top: 18px;
+    }
+
+    .how-it-works .line {
+        width: 100%;
+    }
+
+    .about-block {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .about-block .about-text {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        text-align: center;
+        width: 80%;
+    }
+
+    .about-block .about-text p {
+        margin-left: 0;
+    }
+
+    .about-block .about-text p:first-child {
+        margin-top: 0;
+    }
+
+    .try-it-block .heading {
+        margin-bottom: 65px;
+    }
+
+    .try-it-block .description {
+        display: block;
+        width: 100%;
+    }
+
+    .how-it-works .br {
+        display: block;
+    }
+
+    .try-it-block .description p {
+        display: block;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .try-it-block .try-it-button {
+        width: 85%;
+        margin-top: 30px;
+    }
+
+    .try-it-block .try-it-button a {
+        display: block;
+        width: 330px;
+        background-size: contain;
+        background-position-y: center;
+        margin: auto;
+        float: none;
+    }
+
+    /* search */
+
+    .search-main,
+    .not-found {
+        width: 90%;
+        padding-bottom: 15px;
+    }
+
+    .not-found-buttons a {
+        display: block;
+    }
+
+    .not-found-buttons a:first-child {
+        margin-bottom: 20px;
+    }
+
+    .not-found .upload-image {
+        width: 80%;
+    }
+
+    .step1 img, .not-found img {
+        width: 80%;
+    }
+
+    .search-main .step-description {
+        font-size: 20px;
+    }
+
+    .search-main .upload-image {
+        width: 80%;
+    }
+
+    .manipulation-buttons {
+        width: 100%;
+    }
+
+    .manipulation-buttons #change,
+    .manipulation-buttons #approve {
+        width: 90%;
+    }
+
+    .manipulation-buttons #change {
+        margin-bottom: 20px;
+    }
+
+    .vanilla-calendar .vanilla-calendar-header {
+        border-radius: 0;
+    }
+
+    .vanilla-calendar .vanilla-calendar-week {
+        font-size: 17.7088px;
+    }
+
+    .search-button-block {
+        width: 100%;
+    }
+
+    .search-button-block .search-button {
+        width: 80%;
+    }
+
+    .auth-main {
+        width: 90%;
+        height: auto;
+    }
+
+    .auth-main .registration-with-socials .socials-buttons a {
+        margin-left: 0;
+        display: inline-block;
+        width: 25%;
+    }
+
+    .search-result {
+        width: 100%;
+    }
+
+    .order-block {
+        width: 100%;
+    }
+
+    .order-block .order-block-container {
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .order-block .order-block-container .order-description .choose-count-block,
+    .order-block .order-block-container .order-description .sum-block {
+        font-size: 15px;
+    }
+
+    .order-block .order-block-container .order-button button {
+        width: 100%;
+        height: 60px;
+        margin-top: 9px;
+        border: none;
+        border-radius: 0;
+    }
+
+    .order-block .order-block-container .order-description {
+        width: 100%;
+    }
+
+    .order-block .order-block-container .order-description .sum-block {
+        margin-right: 0;
+    }
+
+    .order-block .order-block-container .order-description .choose-count-block,
+    .order-block .order-block-container .order-description .sum-block {
+        display: inline-block;
+    }
+
+    .order-block .order-block-container .order-description, .order-block .order-block-container .order-button {
+        display: block;
+    }
+
+    .content {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right: auto;
+        transform: none;
+    }
+
+    .content .return-to-index {
+        width: 100%;
+    }
+
+    .content .return-to-index a {
+        width: 90%;
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .content .return-to-index-negative a {
+        display: block;
+        width: 90%;
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .content .return-to-index-negative a:first-child {
+        margin-bottom: 20px;
+    }
+
+    .container-middle-block {
+        width: 40%;
+        display: inline-block;
+        margin: auto;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .container-top-right-top {
+        height: auto;
+    }
+
+    .container-top-right img {
+        width: 450px;
+    }
+
+    .container-top p, .container-bottom p {
+        width: 100%;
+    }
+
+    .rate-container .rate {
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    footer .footer-logo,
+    footer .footer-menu {
+        display: none;
+    }
+
+    footer .footer-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .left-footer-side .socials {
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .how-it-works .how-it-works-item p {
+        font-size: 13px;
+    }
+
+    .container-middle-block {
+        width: 100%;
+        display: block;
+        margin: auto;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .container-top-right img {
+        width: 100%;
+    }
+
+    .try-it-block {
+        height: 500px;
+    }
+
+    .try-it-block .try-it-button a {
+        width: 100%;
+        margin-top: 50px;
+        height: 100px;
+    }
+
+    .about-block .about-text p {
+        font-size: 14px;
+    }
+
+    .try-it-block .try-it-button a span {
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+    }
+
+    .search-main .step-description {
+        font-size: 17px;
+    }
+
+    .first-slide-text,
+    .second-slide-text,
+    .third-slide-text {
+        width: 100%;
+    }
+
+    .first-slide-text span,
+    .second-slide-text span,
+    .third-slide-text span {
+        font-size: 20px;
+    }
+
+    #slick-slide00 {
+        background-size: cover;
+    }
+
+    .auth-main .registration-form .inputs textarea {
+        height: 170px;
+    }
+
+    .auth-main .registration-form .inputs input {
+        height: 40px;
+    }
+
+    .auth-main .registration-button button {
+        height: 40px;
+    }
+
+    .auth-main .registration-form .registration-button .login-link span, .auth-main .info-block span {
+        font-size: 12px;
+
+    }
+
+    .agreement-block strong {
+        line-height: 30px;
+    }
+
+    footer {
+        margin-top: 80px;
+    }
+}
